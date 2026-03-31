@@ -3,7 +3,7 @@ from .models import Phone
 
 
 def catalog(request):
-    sort = request.GET.get('sort', 'name')  # По умолчанию — по названию
+    sort = request.GET.get('sort', 'name')  
 
     if sort == 'price_asc':
         phones = Phone.objects.order_by('price')
